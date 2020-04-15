@@ -14,6 +14,8 @@ import { SpeciesService } from './services/species.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MealsService } from './services/meals.service';
+import { AgGridModule } from 'ag-grid-angular';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { MealsService } from './services/meals.service';
     NavBarComponent,
     HomeComponent,
     ReporterComponent,
-    MealFormComponent
+    MealFormComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { MealsService } from './services/meals.service';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgGridModule.withComponents([])
   ],
   providers: [
     ParkService,

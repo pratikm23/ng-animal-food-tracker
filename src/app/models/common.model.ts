@@ -13,3 +13,7 @@ export interface SavePayload {
     food_quantity: number,
     species_quantity: number
 }
+
+export interface Meal extends SavePayload {
+    id: number;
+}

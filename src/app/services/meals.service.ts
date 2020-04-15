@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SavePayload } from '../models/common.model';
+import { SavePayload, Meal } from '../models/common.model';
 import { ENV_CONFIG } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
 const endPoints = {
-  saveMeal: `${ENV_CONFIG.BASE_URL}/save/meal`
+  saveMeal: `${ENV_CONFIG.BASE_URL}/save/meal`,
+  getMeal: `${ENV_CONFIG.BASE_URL}/meals`,
 }
 
 @Injectable()
@@ -17,6 +18,12 @@ export class MealsService {
     return this.http.post<SavePayload>(
       endPoints.saveMeal,
       data
+    );
+  }
+
+  public getAllMeals(): Observable<Meal[]> {
+    return this.http.get<Meal[]>(
+      endPoints.getMeal
     );
   }
 }
