@@ -1,1 +1,10 @@
-<p>reporter works!</p>
+<h6>Below are the world trends for your favourite animal food habits. Explore their behaviours.</h6>
+
+<ag-grid-angular 
+    style="width: 1300px; height: 500px;" 
+    class="ag-theme-balham center"
+    [enableSorting]="true"
+    [enableFilter]="true"
+    [rowData]="rowData | async" 
+    [columnDefs]="columnDefs">
+</ag-grid-angular>

@@ -35,6 +35,9 @@
                 <input type="number" id="inp_fd_quantity" name="food_quantity" class="form-control" ngModel required #food_qty>
               </div>
             <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
+            <button type="button" [disabled]="true" class="btn btn-light float-right" title="Schedule Feature - Coming soon!">
+              Schedule
+            </button>
           </form>
           <div class="alert alert-success" role="alert" *ngIf="saveStatus.success">
             New Meal has been saved.
