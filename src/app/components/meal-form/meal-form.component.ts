@@ -27,12 +27,11 @@ export class MealFormComponent implements OnInit, OnDestroy {
   ) { }
 
   public ngOnInit(): void {
-    
+
     this.formData = combineLatest(this.parkService.getParks(),
                           this.foodService.getFoods(),
                           this.speciesService.getSpecies()).pipe(
                               map(([parks, foods, species]) => {
-                                console.log(parks, foods, species);
                                 return { parks, foods, species };
                             })
                           )

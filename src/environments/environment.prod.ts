@@ -3,5 +3,5 @@ export const environment = {
 };
 
 export const ENV_CONFIG = {
-  BASE_URL : 'http://localhost:8080/api/v1'
+  BASE_URL : 'https://animaltracker-app-spring.herokuapp.com/api/v1'
 }
