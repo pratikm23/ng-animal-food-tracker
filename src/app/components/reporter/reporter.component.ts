@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MealsService } from 'src/app/services/meals.service';
+import { Meal } from 'src/app/models/common.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-reporter',
@@ -8,7 +10,7 @@ import { MealsService } from 'src/app/services/meals.service';
 })
 export class ReporterComponent implements OnInit {
   public columnDefs: any;
-  public rowData: any;
+  public rowData: Observable<Meal[]>;
 
   constructor(
     private mealsService: MealsService
